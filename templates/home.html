@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for post in posts %}
+<div class="blog_post">
+    <div class="blog_img">
+        <img src="/static/img/manga.jpg" alt="">
+    </div>
+    <div class="blog-info">
+        <h1>{{ post.title }}</h1>
+        <p>By {{ post.author }} on {{ post.date_posted }}</p>
+        <p>{{ post.content }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endblock content%}
